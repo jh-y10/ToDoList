@@ -7,16 +7,21 @@ body {
   min-height: 100vh;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
+#task-input {
+  outline: none;
+}
 .task-area {
   border: 1px solid lightgray;
+  box-sizing: border-box;
 }
 .task-tabs {
   display: flex;
   border-bottom: 1px solid lightgray;
 }
 .task-tabs div {
-  padding: 1em;
+  padding: 1rem;
   position: relative;
+  cursor: pointer;
 }
 #under-line {
   height: 4px;
@@ -30,5 +35,39 @@ body {
 .task {
   display: flex;
   justify-content: space-between;
-  padding: 1em;
+  border-bottom: 1px solid lightgray;
+}
+.task-item {
+  padding-left: 2rem;
+  padding-top: 1.3rem;
+  width: 87%;
+}
+.task-button {
+  background-color: #fff;
+  height: 100%;
+  border: none;
+  margin-left: -4px;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+}
+.check-button:hover {
+  background-color: greenyellow;
+  transition: 0.5s;
+}
+.delete-button:hover {
+  background-color: rgb(255, 0, 0, 0.3);
+  transition: 0.5s;
+}
+.task-done {
+  text-decoration: line-through;
+  background-color: lightgray;
+}
+.fa-check {
+  color: limegreen;
+}
+.fa-xmark {
+  color: red;
+}
+.fa-rotate-left {
+  color: lightslategray;
 }
