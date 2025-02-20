@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 body {
   background-image: url(images/bg.png);
 }
@@ -5,14 +8,32 @@ body {
 .container {
   background-color: white;
   min-height: 100vh;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+#title-img {
+  transform: scale(1.5);
+  position: relative;
+  top: 2.5rem;
+  left: 3rem;
+}
+.input-area {
+  margin-top: 5rem;
 }
 #task-input {
   outline: none;
+  width: 30rem;
+  height: 2.3rem;
+  border: 3px solid orange;
+  border-radius: 5px;
+}
+.btn {
+  margin-bottom: 4px;
+  color: #fff;
 }
 .task-area {
   border: 1px solid lightgray;
-  box-sizing: border-box;
 }
 .task-tabs {
   display: flex;
@@ -27,10 +48,11 @@ body {
   height: 4px;
   background-color: orange;
   position: absolute;
-  width: 60px;
-  left: 72px;
-  top: 140px;
+  width: 0;
+  left: 0;
+  top: 0;
   padding: 0;
+  transition: 0;
 }
 .task {
   display: flex;
@@ -38,17 +60,15 @@ body {
   border-bottom: 1px solid lightgray;
 }
 .task-item {
-  padding-left: 2rem;
-  padding-top: 1.3rem;
-  width: 87%;
+  padding: 1.5rem 1rem;
 }
 .task-button {
-  background-color: #fff;
-  height: 100%;
+  background-color: transparent;
   border: none;
-  margin-left: -4px;
-  padding: 1rem 2rem;
   font-size: 1.5rem;
+  width: 5rem;
+  height: 100%;
+  padding: 1rem 1rem;
 }
 .check-button:hover {
   background-color: greenyellow;
@@ -70,4 +90,15 @@ body {
 }
 .fa-rotate-left {
   color: lightslategray;
+}
+
+@media (min-width:480px) and (max-width:767px) {
+  #task-input {
+    width: 20rem;
+  }
+}
+@media (max-width:479px) {
+  #task-input {
+    width: 15rem;
+  }
 }
